@@ -1,16 +1,16 @@
-/*variables*/
+@charset "UTF-8";
+/* Variables */
 @font-face {
   font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
-  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
 }
+/* Base mobile */
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -18,96 +18,90 @@ body {
   color: hsl(234, 29%, 20%);
   margin: 0;
   min-height: 96vh;
-  padding: 0%;
+  padding: 0;
 }
 
-/*card principal blanca*/
 .card {
   background-color: hsl(0, 0%, 100%);
   min-height: 96vh;
+  width: 100%;
 }
 
-/* seccion formulario*/
+/* Imágenes responsive*/
 .img-mobile {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 .img-desktop {
   display: none;
 }
 
-.sign-up_content {
+/* vista formulario*/
+.sign-up {
+  overflow: hidden;
+}
+.sign-up .illustration {
+  width: 100%;
+}
+.sign-up .content {
   padding: 2rem 1.5rem 2.5rem;
 }
-
-.sign-up_title {
+.sign-up .title {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 1rem;
   color: hsl(234, 29%, 20%);
 }
-
-.sign-up_text {
+.sign-up .text {
   margin: 0 0 1.5rem;
   color: hsl(234, 29%, 20%);
   line-height: 1.5;
 }
-
-.sign-up_list {
+.sign-up .list {
   list-style: none;
   margin: 0 0 2rem;
-  padding: 0%;
+  padding: 0;
 }
-
-.sign-up_list li {
+.sign-up .list li {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
-
-.sign-up_list li img {
+.sign-up .list li img {
   flex-shrink: 0;
 }
 
-/*formulario*/
-.form_field {
+.form .field {
   margin-bottom: 1.5rem;
 }
-
-.form_label-row {
+.form .field.is-error .error {
+  display: block;
+}
+.form .field.is-error .input {
+  border-color: hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.1);
+  color: hsl(4, 100%, 67%);
+}
+.form .label-row {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.5rem;
 }
-
-.form_label {
+.form .label {
   font-size: 0.75rem;
   font-weight: 700;
   color: hsl(234, 29%, 20%);
 }
-
-.form_error {
+.form .error {
   display: none;
   font-size: 0.75rem;
   font-weight: 700;
   color: hsl(4, 100%, 67%);
 }
-
-.form_field.is-error .form_error {
-  display: block;
-}
-
-.form_field.is-error .form_input {
-  border-color: hsl(4, 100%, 67%);
-  background-color: hsla(4, 100%, 67%, 0.1);
-  color: hsl(4, 100%, 67%);
-}
-
-.form_input {
+.form .input {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: 1rem;
@@ -115,21 +109,16 @@ body {
   border: 1px solid hsl(0, 0%, 58%);
   border-radius: 8px;
   box-sizing: border-box;
-  cursor: text;
 }
-
-/*hover y focus email*/
-.form_input:hover {
+.form .input:hover {
   border-color: hsl(234, 29%, 20%);
 }
-
-.form_input:focus {
+.form .input:focus {
   border-color: hsl(234, 29%, 20%);
   outline: 2px solid hsl(234, 29%, 20%);
   outline-offset: 2px;
 }
-
-.form_submit {
+.form .submit {
   width: 100%;
   padding: 1rem 1.5rem;
   font-size: 1rem;
@@ -141,47 +130,38 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-
-/*btn suscribete*/
-.form_submit:hover,
-.form_submit:active {
+.form .submit:active {
   background: linear-gradient(to right, hsl(347, 100%, 66%), hsl(14, 100%, 61%));
   box-shadow: 0 1rem 1.5rem hsla(4, 100%, 67%, 0.4);
 }
-
-.form_submit:focus {
+.form .submit:focus {
   outline: 2px solid hsl(234, 29%, 20%);
   outline-offset: 2px;
 }
 
-/*exito*/
 .success {
   padding: 2rem 1.5rem 2.5rem;
   background-color: hsl(0, 0%, 100%);
-  min-height: 87vh;
+  min-height: 96vh;
   display: flex;
   flex-direction: column;
 }
-
-.success_icon {
+.success .icon {
   display: block;
   margin-bottom: 1.5rem;
 }
-
-.success_title {
+.success .title {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 1rem;
   color: hsl(234, 29%, 20%);
 }
-
-.success_text {
+.success .text {
   margin: 0 0 2rem;
   line-height: 1.5;
   color: hsl(234, 29%, 20%);
 }
-
-.success_dismiss {
+.success .dismiss {
   margin-top: auto;
   width: 100%;
   padding: 1rem 1.5rem;
@@ -194,15 +174,11 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-
-/*dismiss mensaje*/
-.success_dismiss:hover,
-.form_dismiss:active {
+.success .dismiss:active {
   background: linear-gradient(to right, hsl(347, 100%, 66%), hsl(14, 100%, 61%));
   box-shadow: 0 1rem 1.5rem hsla(4, 100%, 67%, 0.4);
 }
-
-.success_dismiss:focus {
+.success .dismiss:focus {
   outline: 2px solid hsl(234, 29%, 20%);
   outline-offset: 2px;
 }
@@ -211,43 +187,46 @@ body {
   display: none;
 }
 
-/*escritorio*/
+/*anidamp dentro de cada bloque los estilos que cambian */
 @media (min-width: 900px) {
   body {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 1rem;
   }
   .card {
     min-height: auto;
     max-width: 930px;
-    border-radius: 24px;
     padding: 1.5rem;
-    box-sizing: border-box;
+    border-radius: 24px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   }
   .sign-up {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
-    min-height: 600px;
+    align-items: stretch;
+    gap: 2rem;
   }
-  .sign-up_content {
+  .sign-up .content {
     order: 1;
     flex: 1;
-    padding: 3rem 1rem 3rem 2rem;
+    padding: 2.5rem 0 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .sign-up_illustration {
+  .sign-up .illustration {
     order: 2;
     flex: 0 0 400px;
-    min-height: 0;
-    border-radius: 16%;
+    border-radius: 16px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .sign-up .title {
+    font-size: 3rem;
   }
   .img-mobile {
     display: none;
@@ -255,14 +234,15 @@ body {
   .img-desktop {
     display: block;
     width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
-  .sign-up_title {
-    font-size: 3rem;
+  .form .submit:hover {
+    background: linear-gradient(to right, hsl(347, 100%, 66%), hsl(14, 100%, 61%));
+    box-shadow: 0 1rem 1.5rem hsla(4, 100%, 67%, 0.4);
   }
-  /*mesage modal de exito */
+  .success .dismiss:hover {
+    background: linear-gradient(to right, hsl(347, 100%, 66%), hsl(14, 100%, 61%));
+    box-shadow: 0 1rem 1.5rem hsla(4, 100%, 67%, 0.4);
+  }
   .success:not(.hidden) {
     position: fixed;
     top: 50%;
@@ -275,7 +255,7 @@ body {
     border-radius: 24px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   }
-  .sign-up_title {
+  .success .title {
     font-size: 3rem;
   }
   .attribution {
