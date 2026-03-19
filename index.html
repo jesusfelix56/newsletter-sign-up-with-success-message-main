@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
@@ -12,77 +10,59 @@
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      color: white;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+    .attribution { font-size: 11px; text-align: center; color: white; }
+    .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-
 <body>
 
-  <!--formulario de suscripcion-->
-
+  <!--contenedor principal -->
   <main class="card">
-    <section class="sign-up" id="sign-up-view">
-
-      <div class="sign-up_illustration">
+    <!-- vista formulario-->
+    <section class="sign-up" id="signUpView">
+      <div class="illustration">
         <img class="img-mobile" src="./assets/images/illustration-sign-up-mobile.svg" alt="" width="375" height="284">
         <img class="img-desktop" src="./assets/images/illustration-sign-up-desktop.svg" alt="" width="400" height="593">
       </div>
-
-      <div class="sign-up_content">
-        <h1 class="sign-up_title">Stay updated!</h1>
-        <p class="sign-up_text">Join 60,000+ product managers receiving monthly updates on:</p>
-
-        <ul class="sign-up_list">
-          <li><img src="./assets/images/icon-list.svg" alt="" aria-hidden="true">Product discovery and building what
-            matters</li>
-          <li><img src="./assets/images/icon-list.svg" alt="" aria-hidden="true">Measuring to ensure updates are a
-            success
-          </li>
-          <li><img src="./assets/images/icon-list.svg" alt="" aria-hidden="true">And much more!</li>
+      <div class="content">
+        <h1 class="title">Stay updated!</h1>
+        <p class="text">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="list">
+          <li><img src="./assets/images/icon-list.svg" alt="" aria-hidden="true"> Product discovery and building what matters</li>
+          <li><img src="./assets/images/icon-list.svg" alt="" aria-hidden="true"> Measuring to ensure updates are a success</li>
+          <li><img src="./assets/images/icon-list.svg" alt="" aria-hidden="true"> And much more!</li>
         </ul>
-
-        <form class="form" id="newsletter-form" novalidate>
-          <div class="form_field">
-            <div class="form_label-row">
-              <label for="email" class=" form_label">Email address</label>
-              <span class="form_error" id="email-error" aria-live="polite">Valid email required</span>
+        <form class="form" id="newsletterForm" novalidate>
+          <div class="field">
+            <div class="label-row">
+              <label for="email" class="label">Email address</label>
+              <span class="error" id="emailError" aria-live="polite">Valid email required</span>
             </div>
-
-            <input type="email" id="email" name="email" class="form_input" placeholder="email@company.com"
-              autocomplete="email">
+            <input type="email" id="email" name="email" class="input" placeholder="email@company.com" autocomplete="email">
           </div>
-          <button type="submit" class="form_submit">Subcribe to monthly Newsletter </button>
+          <button type="submit" class="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </section>
-</main>
-    <!--mensaje de exito modal-->
+  </main>
 
-    <section class="success hidden" id="successView">
-      <img src="./assets/images/icon-success.svg" alt="" class="success-icon" width="64" height="64">
-      <h2 class="success_title">Thanks for subscribing!</h2>
-      <p class="success_text">
-        A confirmation email has been sent to <strong id="success-email">ash@loremcompany.com</strong>
-        Plase open it and click the button inside to confirm your subscription.
-      </p>
-      <button type="button" class="success_dismiss" id="dismiss-btn">Dismiss message</button>
-    </section>
+  <section class="success hidden" id="successView">
+    <img src="./assets/images/icon-success.svg" alt="" class="icon" width="64" height="64">
+    <h2 class="title">Thanks for subscribing!</h2>
+    <p class="text">
+      A confirmation email has been sent to <strong id="successEmail">ash@loremcompany.com</strong>.
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button type="button" class="dismiss" id="dismissBtn">Dismiss message</button>
+  </section>
+
+  <script src="script.js"></script>
   
-
-  <script src= "script.js"></script>
-
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Jesus Felix</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jesús Félix</a>.
   </div>
 </body>
-
 </html>
