@@ -11,314 +11,333 @@ $radius-lg: 24px;
 $breakpoint-desktop: 900px;
 
 @font-face {
-  font-family: 'Roboto';
-  font-weight: 400;
-  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Roboto';
-  font-weight: 700;
-  src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 
 /* Base mobile */
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  background-color: $color-dark;
-  color: $color-dark;
-  margin: 0;
-  min-height: 96vh;
-  padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: $color-dark;
+    color: $color-dark;
+    margin: 0;
+    min-height: 96vh;
+    padding: 0;
 }
 
 .card {
-  background-color: $color-white;
-  min-height: 96vh;
-  width: 100%;
+    background-color: $color-white;
+    min-height: 96vh;
+    width: 100%;
 }
 
 /* Imágenes responsive*/
 .img-mobile {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .img-desktop {
-  display: none;
+    display: none;
 }
+
 /* vista formulario*/
 .sign-up {
-  overflow: hidden;
+    .illustration {
+        width: 100%;
+        overflow: hidden;
 
-  .illustration {
-    width: 100%;
-  }
+        .img-mobile {
+            display: block;
+        }
 
-  .content {
-    padding: 2rem 1.5rem 2.5rem;
-  }
+        .img-desktop {
+            display: none;
+        }
 
-  .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0 0 1rem;
-    color: $color-dark;
-  }
-
-  .text {
-    margin: 0 0 1.5rem;
-    color: $color-dark;
-    line-height: 1.5;
-  }
-
-  .list {
-    list-style: none;
-    margin: 0 0 2rem;
-    padding: 0;
-
-    li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-
-      img {
-        flex-shrink: 0;
-      }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     }
-  }
+
+    .content {
+        padding: 2rem 1.5rem 2.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0 0 1rem;
+        color: $color-dark;
+    }
+
+    .text {
+        margin: 0 0 1.5rem;
+        color: $color-dark;
+        line-height: 1.5;
+    }
+
+    .list {
+        list-style: none;
+        margin: 0 0 2rem;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+
+            img {
+                flex-shrink: 0;
+            }
+        }
+    }
 }
 
 .form {
-  .field {
-    margin-bottom: 1.5rem;
+    .field {
+        margin-bottom: 1.5rem;
 
-    &.is-error {
-      .error {
-        display: block;
-      }
+        &.is-error {
+            .error {
+                display: block;
+            }
 
-      .input {
-        border-color: $color-error;
-        background-color: $color-error-bg;
+            .input {
+                border-color: $color-error;
+                background-color: $color-error-bg;
+                color: $color-error;
+            }
+        }
+    }
+
+    .label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.5rem;
+    }
+
+    .label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: $color-dark;
+    }
+
+    .error {
+        display: none;
+        font-size: 0.75rem;
+        font-weight: 700;
         color: $color-error;
-      }
-    }
-  }
-
-  .label-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5rem;
-  }
-
-  .label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: $color-dark;
-  }
-
-  .error {
-    display: none;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: $color-error;
-  }
-
-  .input {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    font-size: 1rem;
-    font-family: inherit;
-    border: 1px solid $color-border;
-    border-radius: $radius-sm;
-    box-sizing: border-box;
-
-    &:hover {
-      border-color: $color-dark;
     }
 
-    &:focus {
-      border-color: $color-dark;
-      outline: 2px solid $color-dark;
-      outline-offset: 2px;
-    }
-  }
+    .input {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        font-family: inherit;
+        border: 1px solid $color-border;
+        border-radius: $radius-sm;
+        box-sizing: border-box;
 
-  .submit {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: inherit;
-    color: white;
-    background-color: $color-dark;
-    border: none;
-    border-radius: $radius-sm;
-    cursor: pointer;
+        &:hover {
+            border-color: $color-dark;
+        }
 
-    &:active {
-      background: $gradient-btn;
-      box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
+        &:focus {
+            border-color: $color-dark;
+            outline: 2px solid $color-dark;
+            outline-offset: 2px;
+        }
     }
 
-    &:focus {
-      outline: 2px solid $color-dark;
-      outline-offset: 2px;
+    .submit {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: inherit;
+        color: white;
+        background-color: $color-dark;
+        border: none;
+        border-radius: $radius-sm;
+        cursor: pointer;
+
+        &:active {
+            background: $gradient-btn;
+            box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
+        }
+
+        &:focus {
+            outline: 2px solid $color-dark;
+            outline-offset: 2px;
+        }
     }
-  }
 }
 
 .success {
-  padding: 2rem 1.5rem 2.5rem;
-  background-color: $color-white;
-  min-height: 96vh;
-  display: flex;
-  flex-direction: column;
+    padding: 2rem 1.5rem 2.5rem;
+    background-color: $color-white;
+    min-height: 96vh;
+    display: flex;
+    flex-direction: column;
 
-  .icon {
-    display: block;
-    margin-bottom: 1.5rem;
-  }
-
-  .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 0 0 1rem;
-    color: $color-dark;
-  }
-
-  .text {
-    margin: 0 0 2rem;
-    line-height: 1.5;
-    color: $color-dark;
-  }
-
-  .dismiss {
-    margin-top: auto;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: inherit;
-    color: white;
-    background-color: $color-dark;
-    border: none;
-    border-radius: $radius-sm;
-    cursor: pointer;
-
-    &:active {
-      background: $gradient-btn;
-      box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
+    .icon {
+        display: block;
+        margin-bottom: 1.5rem;
     }
 
-    &:focus {
-      outline: 2px solid $color-dark;
-      outline-offset: 2px;
+    .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0 0 1rem;
+        color: $color-dark;
     }
-  }
+
+    .text {
+        margin: 0 0 2rem;
+        line-height: 1.5;
+        color: $color-dark;
+    }
+
+    .dismiss {
+        margin-top: auto;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: inherit;
+        color: white;
+        background-color: $color-dark;
+        border: none;
+        border-radius: $radius-sm;
+        cursor: pointer;
+
+        &:active {
+            background: $gradient-btn;
+            box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
+        }
+
+        &:focus {
+            outline: 2px solid $color-dark;
+            outline-offset: 2px;
+        }
+    }
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
-/*anidadp dentro de cada bloque los estilos que cambian */
+/*anidamp dentro de cada bloque los estilos que cambian */
 @media (min-width: $breakpoint-desktop) {
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  .card {
-    min-height: auto;
-    max-width: 930px;
-    padding: 1.5rem;
-    border-radius: $radius-lg;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  }
-
-  .sign-up {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    gap: 2rem;
-
-    .content {
-      order: 1;
-      flex: 1;
-      padding: 2.5rem 0 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
     }
 
-    .illustration {
-      order: 2;
-      flex: 0 0 400px;
-      border-radius: $radius-md;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
+    .card {
+        min-height: auto;
+        max-width: 930px;
+        padding: 1.5rem;
+        border-radius: $radius-lg;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     }
 
-    .title {
-      font-size: 3rem;
-    }
-  }
+    .sign-up {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 2rem;
 
-  .img-mobile {
-    display: none;
-  }
+        .content {
+            order: 1;
+            flex: 1;
+            padding: 2.5rem 0 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-  .img-desktop {
-    display: block;
-    width: 100%;
-  }
+        .illustration {
+            order: 2;
+            flex: 0 0 400px;
+            border-radius: $radius-md;
+            overflow: hidden;
+            display: flex;
+            align-items: stretch;
+        }
 
-  .form {
-    .submit {
-      &:hover {
-        background: $gradient-btn;
-        box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
-      }
-    }
-  }
-
-  .success {
-    .dismiss {
-      &:hover {
-        background: $gradient-btn;
-        box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
-      }
+        .title {
+            font-size: 3rem;
+        }
     }
 
-    &:not(.hidden) {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 10;
-      max-width: 500px;
-      min-height: auto;
-      padding: 3rem;
-      border-radius: $radius-lg;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    .sign-up .illustration {
+        .img-mobile {
+            display: none;
+        }
+
+        .img-desktop {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
-    .title {
-      font-size: 3rem;
+    .form {
+        .submit {
+            &:hover {
+                background: $gradient-btn;
+                box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
+            }
+        }
     }
-  }
 
-  .attribution {
-    padding-bottom: 0.5rem;
-    align-self: center;
-  }
+    .success {
+        .dismiss {
+            &:hover {
+                background: $gradient-btn;
+                box-shadow: 0 1rem 1.5rem hsl(4, 100%, 67%, 0.4);
+            }
+        }
+
+        &:not(.hidden) {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: min(100% - 2rem, 430px);
+            min-height: auto;
+            padding: 3rem;
+            border-radius: $radius-lg;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .title {
+            font-size: 3rem;
+        }
+    }
+
+    .attribution {
+        padding-bottom: 0.5rem;
+        align-self: center;
+    }
 }
