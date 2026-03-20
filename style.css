@@ -23,7 +23,7 @@ body {
 
 .card {
   background-color: hsl(0, 0%, 100%);
-  min-height: 96vh;
+  min-height: 98vh;
   width: 100%;
 }
 
