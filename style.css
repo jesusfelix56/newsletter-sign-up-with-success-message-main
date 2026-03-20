@@ -150,9 +150,11 @@ body {
 }
 
 .success {
-  padding: 2rem 1.5rem 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9.25rem 1.5rem 2.5rem;
   background-color: hsl(0, 0%, 100%);
-  min-height: 96vh;
+  min-height: 98dvh;
   display: flex;
   flex-direction: column;
 }
@@ -168,6 +170,7 @@ body {
 }
 .success .text {
   margin: 0 0 2rem;
+  max-width: 34ch;
   line-height: 1.5;
   color: hsl(234, 29%, 20%);
 }
