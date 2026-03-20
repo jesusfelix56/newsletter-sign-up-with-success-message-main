@@ -31,6 +31,7 @@ body {
 .img-mobile {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .img-desktop {
@@ -38,11 +39,20 @@ body {
 }
 
 /* vista formulario*/
-.sign-up {
-  overflow: hidden;
-}
 .sign-up .illustration {
   width: 100%;
+  overflow: hidden;
+}
+.sign-up .illustration .img-mobile {
+  display: block;
+}
+.sign-up .illustration .img-desktop {
+  display: none;
+}
+.sign-up .illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .sign-up .content {
   padding: 2rem 1.5rem 2.5rem;
@@ -223,17 +233,20 @@ body {
     border-radius: 16px;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: stretch;
   }
   .sign-up .title {
     font-size: 3rem;
   }
-  .img-mobile {
+  .sign-up .illustration .img-mobile {
     display: none;
   }
-  .img-desktop {
+  .sign-up .illustration .img-desktop {
     display: block;
     width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .form .submit:hover {
     background: linear-gradient(to right, hsl(347, 100%, 66%), hsl(14, 100%, 61%));
@@ -249,7 +262,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    max-width: 500px;
+    width: min(100% - 2rem, 430px);
     min-height: auto;
     padding: 3rem;
     border-radius: 24px;
